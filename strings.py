@@ -9,7 +9,7 @@ Create a function that returns a list of 4 character strings:
 Example: ['mont', 'y py', 'thon', 's fl', 'ying', ' cir', 'cus']
 ### git comment
 """
-import pytest
+a_string = 'monty pythons flying circus'
 
 
 def no_duplicates(a_string):
@@ -17,13 +17,13 @@ def no_duplicates(a_string):
     lst = sorted(set(a_string))
     for i in lst:
         string += i
-    return string
+    print(string)
 
 
 def reversed_words(a_string):
     lst = a_string.split(" ")
     lst.reverse()
-    return lst
+    print(lst)
 
 
 def four_char_strings(a_string):
@@ -32,27 +32,13 @@ def four_char_strings(a_string):
         chars = a_string[:4:]
         lst.append(chars)
         a_string = a_string.replace(chars, "")
-    return lst
+    print(lst)
 
 
-def test_no_duplicates():
-    s = 'monty pythons flying circus'
-    assert no_duplicates(s) == ' cfghilmnoprstuy'
-
-
-def test_reversed_words():
-    s = 'monty pythons flying circus'
-    assert reversed_words(s) == ['circus', 'flying', 'pythons', 'monty']
-
-
-def test_four_char_strings():
-    s = 'monty pythons flying circus'
-    assert four_char_strings(s) == ['mont', 'y py', 'thon', 's fl', 'ying', ' cir', 'cus']
-
-
-def main():
-    return pytest.main(__file__)
-
-
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    print("1. - ", end="")
+    no_duplicates(a_string)
+    print("2. - ", end="")
+    reversed_words(a_string)
+    print("3. - ", end="")
+    four_char_strings(a_string)
