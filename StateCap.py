@@ -12,8 +12,6 @@ handle that?
 """
 import sys
 
-import pytest
-
 STATES_CAPITALS = {
     'Alabama': 'Montgomery',
     'Alaska': 'Juneau',
